@@ -1,0 +1,7 @@
+.vscode
+.jshintrc
+.env
+
+node_modules
+.temp
+.out

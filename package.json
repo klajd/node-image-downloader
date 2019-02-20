@@ -1,0 +1,32 @@
+{
+  "name": "image-downloader",
+  "version": "0.1.0",
+  "description": "NodeJs Tool to Download and compress image from server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klajd/node-image-downloader.git"
+  },
+  "keywords": [
+    "image",
+    "compress",
+    "jpeg",
+    "download"
+  ],
+  "author": "Klajd Diko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/klajd/node-image-downloader/issues"
+  },
+  "homepage": "https://github.com/klajd/node-image-downloader#readme",
+  "dependencies": {
+    "dateformat": "^3.0.3",
+    "dotenv": "^6.2.0",
+    "imagemin": "^6.1.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "request": "^2.88.0"
+  }
+}
