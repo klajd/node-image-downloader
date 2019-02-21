@@ -8,7 +8,7 @@ const env = require('dotenv').config();
 
 // .env
 const url = process.env.URL;
-const output = process.env.OUT_DIR || 'out';
+const output = process.env.OUT_DIR || '.out';
 const temp = process.env.TEMP_DIR || '.temp';
 const fileFormat = process.env.FILE_FORMAT;
 const jpegQuality = process.env.JPEG_QUALITY;
@@ -27,11 +27,12 @@ console.log(`Configuration: ${process.env}`);
 }());
 
 async function grepImage(url) {
+  let outDir = dateFormat(Date.now(), output);
   let datetime = dateFormat(Date.now(), fileFormat);
   let filename = path.join(temp, `${datetime}.jpg`);
 
   await download(url, filename);
-  await compress(filename, output);
+  await compress(filename, outDir);
   await clean(filename);
 }
 
